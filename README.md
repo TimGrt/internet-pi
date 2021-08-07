@@ -2,6 +2,7 @@
 
 **A Project for Internet connectivity monitoring network-wide ad-blocking and local DNS, intended for running on a Raspberry Pi**
 
+[![Ansible Lint](https://github.com/TimGrt/internet-pi/actions/workflows/ci.yml/badge.svg)](https://github.com/TimGrt/internet-pi/actions/workflows/ci.yml) [![CodeFactor](https://www.codefactor.io/repository/github/timgrt/internet-pi/badge)](https://www.codefactor.io/repository/github/timgrt/internet-pi)
 ## Features
 
 **Internet Monitoring**: Installs Prometheus and Grafana, along with a few Docker containers to monitor the Internet connection with Speedtest.net speedtests and HTTP tests so uptime, ping stats, and speedtest results can be seen over time.
