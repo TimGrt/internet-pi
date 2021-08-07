@@ -1,0 +1,5 @@
+---
+
+- name: Ensure pacman cache is up to date
+  community.general.pacman:
+    update_cache: true

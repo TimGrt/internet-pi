@@ -1,0 +1,4 @@
+---
+
+- name: Install and configure Docker
+  ansible.builtin.import_tasks: docker.yml

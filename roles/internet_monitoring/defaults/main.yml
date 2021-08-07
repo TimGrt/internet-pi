@@ -1,0 +1,13 @@
+---
+
+config_dir: '~'
+
+# Internet monitoring configuration.
+monitoring_grafana_admin_password: "admin"
+monitoring_speedtest_interval: 60m
+monitoring_ping_interval: 5s
+monitoring_ping_hosts:  # [URL];[HUMAN_READABLE_NAME]
+  - http://www.google.de/;google.de
+  - https://github.com/;github.com
+  - https://amazon.de/;amazon.de
+  - https://hub.docker.com/;hub.docker.com

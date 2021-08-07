@@ -1,0 +1,4 @@
+---
+
+- name: Install and configure Internet monitoring
+  ansible.builtin.import_tasks: internet-monitoring.yml

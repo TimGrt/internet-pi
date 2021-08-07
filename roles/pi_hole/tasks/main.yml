@@ -1,0 +1,4 @@
+---
+
+- name: Install and configure PiHole
+  ansible.builtin.import_tasks: pi-hole.yml

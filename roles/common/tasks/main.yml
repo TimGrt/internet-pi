@@ -1,0 +1,10 @@
+---
+
+- name: Execute Debian specific common tasks
+  ansible.builtin.import_tasks: debian.yml
+  when: ansible_facts.os_family == "Debian"
+
+- name: Execute Arch Linux specific common tasks
+  ansible.builtin.import_tasks: arch.yml
+  when:
+    - ansible_facts.os_family == "Archlinux"
