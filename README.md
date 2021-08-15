@@ -1,6 +1,6 @@
 # Internet Pi
 
-**A Project for Internet connectivity monitoring network-wide ad-blocking and local DNS, intended for running on a Raspberry Pi**
+**A Project for Internet connectivity monitoring, network-wide ad-blocking and local DNS, intended for running on a Raspberry Pi**
 
 [![Ansible Lint](https://github.com/TimGrt/internet-pi/actions/workflows/ci.yml/badge.svg)](https://github.com/TimGrt/internet-pi/actions/workflows/ci.yml) [![CodeFactor](https://www.codefactor.io/repository/github/timgrt/internet-pi/badge)](https://www.codefactor.io/repository/github/timgrt/internet-pi)
 ## Features
@@ -51,7 +51,19 @@ ansible-playbook main.yml
 
 ### Pi-hole
 
-Visit the Pi's IP address (e.g. http://192.168.1.10/) and use the `pihole_password` you configured in your `config.yml` file.
+Visit the Pi's IP address (e.g. http://192.168.1.10/) and use the `pihole_password` which is set in the defaults folder of the role.
+
+> Note: The `pihole_password` should be changed to a more secure password! The password is the actual one for the PiHole UI!
+
+Either change the variable in the defaults folder or set it in e.g. *host_vars* and encrpyt it, if you intend to store the project in a publicly accessible place.  
+When running the playbook again, provide the Vault password.
+```bash
+$ ansible-vault encrypt host_vars/internetpi.yml
+New Vault password: 
+Confirm New Vault password: 
+Encryption successful
+$ ansible-playbook main.yml --ask-vault-pass
+```
 
 ### Grafana
 

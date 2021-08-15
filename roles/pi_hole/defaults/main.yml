@@ -5,4 +5,4 @@ config_dir: '~'
 # Pi-hole configuration.
 pihole_hostname: pihole
 pihole_timezone: Europe/Berlin
-pihole_password: "m0REXX7ENxFry2iKwd0X"
+pihole_password: changeme
