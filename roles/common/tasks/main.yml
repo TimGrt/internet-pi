@@ -1,5 +1,12 @@
 ---
 
+# This task sets the alias given for the host in inventory.ini
+# If an IP address is given, the task is skipped
+- name: Set hostname when inventory alias is given
+  ansible.builtin.hostname:
+    name: "{{ inventory_hostname }}"
+  when: not inventory_hostname | ansible.netcommon.ipaddr
+
 - name: Execute Debian specific common tasks
   ansible.builtin.import_tasks: debian.yml
   when: ansible_facts.os_family == "Debian"
