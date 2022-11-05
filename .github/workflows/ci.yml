@@ -16,3 +16,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: ansible-community/ansible-lint-action@main
+        with:
+          path: main.yml
