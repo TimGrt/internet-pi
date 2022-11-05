@@ -53,7 +53,7 @@
     state: present
     executable: pip3
 
-- name: Ensure {{ ansible_user }} user is added to the docker group.
+- name: Ensure {{ ansible_user }} user is added to the docker group.  # noqa name[template]
   ansible.builtin.user:
     name: "{{ ansible_user }}"
     groups: docker
@@ -61,4 +61,4 @@
 
 # reset_connection doesn't support conditionals.
 - name: Reset connection so docker group is picked up.
-  meta: reset_connection
+  ansible.builtin.meta: reset_connection
